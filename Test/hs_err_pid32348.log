@@ -1,0 +1,175 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 10720 bytes. Error detail: AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=32348, tid=48548
+#
+# JRE version:  (21.0.8+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (21.0.8+9-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:59815 -javaagent:C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\configuration\org.eclipse.osgi\442\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 test.Sample
+
+Host: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz, 8 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3958)
+Time: Thu Oct 23 13:12:45 2025 elapsed time: 0.048724 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x000000c4f9400000,0x000000c4f9500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6d2449]
+
+
+---------------  P R O C E S S  ---------------
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Not initialized>
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff70b8c0000 - 0x00007ff70b8ce000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\javaw.exe
+0x00007ffb70cb0000 - 0x00007ffb70ec7000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffb6f430000 - 0x00007ffb6f4f4000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffb6e550000 - 0x00007ffb6e907000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffb6e310000 - 0x00007ffb6e421000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffb68da0000 - 0x00007ffb68db8000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\jli.dll
+0x00007ffb6ee70000 - 0x00007ffb6f01f000 	C:\Windows\System32\USER32.dll
+0x00007ffb6e9b0000 - 0x00007ffb6e9d6000 	C:\Windows\System32\win32u.dll
+0x00007ffb6ee40000 - 0x00007ffb6ee69000 	C:\Windows\System32\GDI32.dll
+0x00007ffb6e1f0000 - 0x00007ffb6e308000 	C:\Windows\System32\gdi32full.dll
+0x00007ffb6e910000 - 0x00007ffb6e9aa000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffb67e50000 - 0x00007ffb67e6e000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\VCRUNTIME140.dll
+0x00007ffb5a300000 - 0x00007ffb5a593000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3672_none_2713b9d173822955\COMCTL32.dll
+0x00007ffb6ed90000 - 0x00007ffb6ee37000 	C:\Windows\System32\msvcrt.dll
+0x00007ffb6ed50000 - 0x00007ffb6ed81000 	C:\Windows\System32\IMM32.DLL
+0x00007ffb6a7f0000 - 0x00007ffb6a7fc000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\vcruntime140_1.dll
+0x00007ffb1ca70000 - 0x00007ffb1cafd000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\msvcp140.dll
+0x00007ffb07720000 - 0x00007ffb084b7000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\server\jvm.dll
+0x00007ffb70a80000 - 0x00007ffb70b32000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffb6e9e0000 - 0x00007ffb6ea88000 	C:\Windows\System32\sechost.dll
+0x00007ffb6e520000 - 0x00007ffb6e548000 	C:\Windows\System32\bcrypt.dll
+0x00007ffb6fa90000 - 0x00007ffb6fba4000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffb70bf0000 - 0x00007ffb70c61000 	C:\Windows\System32\WS2_32.dll
+0x00007ffb6ce30000 - 0x00007ffb6ce7d000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ffb67a20000 - 0x00007ffb67a54000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffb6a230000 - 0x00007ffb6a23a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffb6ce10000 - 0x00007ffb6ce23000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ffb6d0c0000 - 0x00007ffb6d0d8000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffb6ace0000 - 0x00007ffb6acea000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\jimage.dll
+0x00007ffb67c10000 - 0x00007ffb67c4c000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\jdwp.dll
+0x00007ffb6a020000 - 0x00007ffb6a02f000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\instrument.dll
+0x00007ffb6a9d0000 - 0x00007ffb6a9ef000 	C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin\java.dll
+
+JVMTI agents:
+jdwp path:none, loaded, not initialized, options:transport=dt_socket,suspend=y,address=localhost:59815
+C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\configuration\org.eclipse.osgi\442\0\.cp\lib\javaagent-shaded.jar path:none, loaded, not initialized, instrumentlib options:none
+
+dbghelp: loading error: 1455
+symbol engine: initialization error.
+
+VM Arguments:
+jvm_args: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:59815 -javaagent:C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\configuration\org.eclipse.osgi\442\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 
+java_command: test.Sample
+java_class_path (initial): C:\Users\samsung\Desktop\JAVA\Test\bin
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 267022720                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4272363520                                {product} {ergonomic}
+   size_t MinHeapSize                              = 6815736                                   {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Users\samsung\Desktop\JavaUtil (1)\설치파일\zulu21.44.17-ca-jdk21.0.8-win_x64
+PATH=C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre\bin;C:/Users/samsung/Downloads/eclipse-jee-2025-09-R-win32-x86_64/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412/jre/bin/server;C:/Users/samsung/Downloads/eclipse-jee-2025-09-R-win32-x86_64/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PuTTY\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Users\samsung\Desktop\JavaUtil (1)\설치파일\zulu21.44.17-ca-jdk21.0.8-win_x64\bin;C:\Program Files\Git\cmd;C:\Users\samsung\AppData\Local\Microsoft\WindowsApps;C:\Users\samsung\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\samsung\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse;
+USERNAME=samsung
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+TMP=C:\Users\samsung\AppData\Local\Temp
+TEMP=C:\Users\samsung\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.3958)
+OS uptime: 0 days 3:29 hours
+
+CPU: total 8 (initial active 8) 
+Processor Information for the first 8 processors :
+  Max Mhz: 2592, Current Mhz: 2592, Mhz Limit: 2592
+
+Memory: 4k page, system-wide physical 16297M (3774M free)
+TotalPageFile size 65449M (AvailPageFile size 2M)
+current process WorkingSet (physical memory assigned to process): 7M, peak: 7M
+current process commit charge ("private bytes"): 2M, peak: 2M
+
+vm_info: OpenJDK 64-Bit Server VM (21.0.8+9-LTS) for windows-amd64 JRE (21.0.8+9-LTS), built on 2025-07-15T00:00:00Z by "admin" with MS VC++ 17.7 (VS2022)
+
+END.
